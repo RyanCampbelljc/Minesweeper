@@ -1,0 +1,8 @@
+To compile ctrl-shft-b -> tsc: build - tsconfig.json
+
+
+todo
+create a gameclass that takes no params in constructor and get the difficulty itself.
+possible to make it a singleton so that the tiles can send a signal to it whenever one is revealed
+1) in script.ts create a new game if the level difficulty is changed.
+2) gameboard resonsible for telling script.ts when the game is over so it can update(add congradulations etc)

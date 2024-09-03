@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MineSweeper</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" src="out/script.js"></script>
+  </head>
+  <body>
+    <h1 id="pageTitle">MineSweeper</h1>
+    <h3 id="gameStatus"></h3>
+
+    <form method="post">
+      <p>
+        <label
+          >Beginner
+          <input
+            name="difficulty"
+            type="radio"
+            id="beginner"
+            checked="checked"
+          />
+        </label>
+
+        <label
+          >Intermediate
+          <input name="difficulty" type="radio" id="intermediate" />
+        </label>
+
+        <label
+          >Expert
+          <input name="difficulty" type="radio" id="expert" />
+        </label>
+      </p>
+    </form>
+
+    <div style="text-align: center">
+      <strong>Board Size: <span id="boardSize"></span></strong>
+      <br />
+      <strong>Bombs Left: <span id="flagCount"></span>?</strong>
+      <br />
+      <strong>Time: <span id="time">0</span></strong>
+    </div>
+
+    <!-- The gameboard is made by adding rows and columns to this table -->
+    <table id="table"></table>
+
+    <form method="post" id="reset">
+      <p>
+        <input type="button" value="RESET" id="button" />
+      </p>
+    </form>
+  </body>
+</html>
