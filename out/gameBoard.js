@@ -86,6 +86,39 @@ export class GameBoard {
         }
         if (this.m_tileArray[row][col].isBomb())
             this.setGameOver();
+        else if (this.m_tileArray[row][col].getNumAdjacentBombs() == 0) {
+            this.updateAdjacentTiles(row, col);
+        }
+        if (this.checkIfGameWon()) {
+            Game.getGameInstance().setGameWon();
+        }
+    }
+    checkIfGameWon() {
+        for (let i = 0; i < this.m_boardSize; ++i) {
+            for (let j = 0; j < this.m_boardSize; ++j) {
+                if (!this.m_tileArray[i][j].isBomb() && !this.m_tileArray[i][j].isRevealed())
+                    return false;
+            }
+        }
+        return true;
+    }
+    updateAdjacentTiles(row, col) {
+        if (this.inBounds(row - 1, col))
+            this.m_tileArray[row - 1][col].updateTile();
+        if (this.inBounds(row - 1, col + 1))
+            this.m_tileArray[row - 1][col + 1].updateTile();
+        if (this.inBounds(row - 1, col - 1))
+            this.m_tileArray[row - 1][col - 1].updateTile();
+        if (this.inBounds(row, col + 1))
+            this.m_tileArray[row][col + 1].updateTile();
+        if (this.inBounds(row, col - 1))
+            this.m_tileArray[row][col - 1].updateTile();
+        if (this.inBounds(row + 1, col))
+            this.m_tileArray[row + 1][col].updateTile();
+        if (this.inBounds(row + 1, col + 1))
+            this.m_tileArray[row + 1][col + 1].updateTile();
+        if (this.inBounds(row + 1, col - 1))
+            this.m_tileArray[row + 1][col - 1].updateTile();
     }
     setGameOver() {
         this.revealBombs();

@@ -46,5 +46,9 @@ export class Game {
         this.m_gameOver = true;
         document.getElementById("gameStatus").innerText = "Game Over!";
     }
+    setGameWon() {
+        this.m_gameOver = true;
+        document.getElementById("gameStatus").innerText = "You Win!";
+    }
 }
 //# sourceMappingURL=game.js.map

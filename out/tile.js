@@ -17,6 +17,9 @@ export class Tile {
     setNumAdjacentBombs(numBombs) {
         this.m_numAdjacentBombs = numBombs;
     }
+    getNumAdjacentBombs() {
+        return this.m_numAdjacentBombs;
+    }
     isRevealed() {
         return this.m_isRevealed;
     }

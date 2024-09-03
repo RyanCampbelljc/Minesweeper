@@ -56,4 +56,9 @@ export class Game{
         document.getElementById("gameStatus")!.innerText = "Game Over!"
     }
 
+    public setGameWon(){
+        this.m_gameOver = true;
+        document.getElementById("gameStatus")!.innerText = "You Win!"
+    }
+
 }

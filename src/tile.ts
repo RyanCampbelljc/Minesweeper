@@ -21,11 +21,10 @@ export class Tile{
         this.m_numAdjacentBombs = numBombs;
     }
     
+    public getNumAdjacentBombs(): number {
+        return this.m_numAdjacentBombs;
+    }
 
-    // public revealTile(): void{
-    //     this.m_isRevealed = true;
-    // }
-    
     public isRevealed(): Boolean{
         return this.m_isRevealed;
     }
@@ -34,14 +33,14 @@ export class Tile{
         return this.m_isBomb;
     }
 
-    public setBomb(){
+    public setBomb(): void{
         this.m_isBomb = true;
     }
 
     public getTableCell(): HTMLTableCellElement{
         return this.m_tableCell;
     }
-    private updateTile(){
+    public updateTile(){
         if(this.m_isRevealed || Game.getGameInstance().isGameOver())
             return;
         this.m_isRevealed = true;
