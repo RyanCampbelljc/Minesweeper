@@ -1,5 +1,15 @@
 To compile ctrl-shft-b -> tsc: build - tsconfig.json
 
+left
+difficulty
+reset
 
-1) make time work
-2) style it nicer
+mid
+flags
+time
+
+right
+sound on or off
+github
+
+on mid ui make top and bottom have same space as left and right

@@ -6,20 +6,17 @@ export class Game {
     static m_GameInstance;
     m_gameOver = false;
     constructor() {
-        let beg = document.getElementById("beginner");
-        let interm = document.getElementById("intermediate");
-        if (beg.checked) {
+        let dropDown = document.getElementById("dropDown");
+        if (dropDown.value === "beginner") {
             this.m_difficulty = CONSTANTS.DIFFICULTY.BEGINNER;
         }
-        else if (interm.checked) {
+        else if (dropDown.value === "intermediate") {
             this.m_difficulty = CONSTANTS.DIFFICULTY.INTERMEDIATE;
         }
         else {
             this.m_difficulty = CONSTANTS.DIFFICULTY.EXPERT;
         }
         this.m_gameBoard = new GameBoard(CONSTANTS.BOARD_SIZES[this.m_difficulty]);
-        let txt = String(CONSTANTS.BOARD_SIZES[this.m_difficulty] + 'x' + CONSTANTS.BOARD_SIZES[this.m_difficulty]);
-        document.getElementById("boardSize").innerText = txt;
     }
     static getGameInstance() {
         if (Game.m_GameInstance) {

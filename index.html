@@ -9,46 +9,44 @@
     <script type="module" src="out/script.js"></script>
   </head>
   <body>
-    <h1 id="pageTitle">MineSweeper</h1>
-    <h3 id="gameStatus"></h3>
-
-    <form method="post">
-      <p>
-        <label
-          >Beginner
-          <input
-            name="difficulty"
-            type="radio"
-            id="beginner"
-            checked="checked"
-          />
-        </label>
-
-        <label
-          >Intermediate
-          <input name="difficulty" type="radio" id="intermediate" />
-        </label>
-
-        <label
-          >Expert
-          <input name="difficulty" type="radio" id="expert" />
-        </label>
-      </p>
-    </form>
-
-    <div style="text-align: center">
-      <strong>Board Size: <span id="boardSize"></span></strong>
-      <br />
-      <strong>Time: <span id="time">0</span></strong>
+    <div id="header">
+      <h1 id="pageTitle">MineSweeper</h1>
+      <h3 id="gameStatus">awd</h3>
     </div>
 
-    <!-- The gameboard is made by adding rows and columns to this table -->
-    <table id="table"></table>
+    <div id="game-content">
+      <div id="game-content-ui">
+        <div class="game-content-ui-item">
+          <form method="post">
+            <select name="difficulty" id="dropDown">
+              <!-- changed the display text so the drop down would have ledd with -->
+              <option value="beginner">Easy</option>
+              <option value="intermediate">Medium</option>
+              <option value="expert">Hard</option>
+            </select>
+          </form>
 
-    <form method="post" id="reset">
-      <p>
-        <input type="button" value="RESET" id="button" />
-      </p>
-    </form>
+          <form method="post" id="reset">
+            <p>
+              <input type="button" value="RESET" id="button" />
+            </p>
+          </form>
+        </div>
+
+        <div class="game-content-ui-item" id="midUI">
+          <strong>T: <span id="time">0</span></strong>
+          <p>mid</p>
+        </div>
+
+        <div class="game-content-ui-item" id="rightUI">
+          <p>right</p>
+          <p>right!</p>
+        </div>
+      </div>
+      <!-- The gameboard is made by adding rows and columns to this table -->
+      <table id="table"></table>
+    </div>
+
+    <div id="footer"></div>
   </body>
 </html>
