@@ -19,6 +19,8 @@ export class Game{
             this.m_difficulty = CONSTANTS.DIFFICULTY.EXPERT;
         }
         this.m_gameBoard = new GameBoard(CONSTANTS.BOARD_SIZES[this.m_difficulty]);
+        let txt:string = String(CONSTANTS.BOARD_SIZES[this.m_difficulty] + 'x' + CONSTANTS.BOARD_SIZES[this.m_difficulty])
+        document.getElementById("boardSize")!.innerText = txt;
     }
 
     public static getGameInstance(){
@@ -32,10 +34,6 @@ export class Game{
     public restartGame(){//todo feel like this is improper for singleton but works nice here
         document.getElementById("gameStatus")!.innerText = "";
         Game.m_GameInstance = new Game();
-    }
-    //todo remove was for debugging
-    public getBoard(){
-        return this.m_gameBoard;
     }
 
     public isGameOver(){

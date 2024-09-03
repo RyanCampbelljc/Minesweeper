@@ -8,7 +8,7 @@ export var DIFFICULTY;
     DIFFICULTY[DIFFICULTY["EXPERT"] = 2] = "EXPERT";
 })(DIFFICULTY || (DIFFICULTY = {}));
 ;
-const NUM_BOMBS = [10, 40, 70];
+const NUM_BOMBS = [10, 28, 48];
 const BOARD_SIZES = [9, 15, 20];
 const CONSTANTS = { DIFFICULTY, NUM_BOMBS, BOARD_SIZES };
 export default CONSTANTS;

@@ -16,9 +16,8 @@ export class GameBoard{
         this.m_tileArray = this.createTileArray();
     }
 
-    //todo assign types here
     private createTileArray(): Tile[][]{
-        let tileArray: Tile[][] = []; // todo what
+        let tileArray: Tile[][] = [];
         for(let i = 0; i < this.m_boardSize; ++i){
             let tr = document.createElement("tr");
             const row: Tile[] = [];
@@ -32,10 +31,6 @@ export class GameBoard{
         }
         return tileArray;
         
-    }
-    //todo remove was for debugging
-    public getTileArray(){
-        return this.m_tileArray;
     }
 
     private placeBombs(){
@@ -136,11 +131,4 @@ export class GameBoard{
             }
         }
     }
-    // private printTileArray(){
-    //     for(let i = 0; i < this.m_boardSize; ++i){
-    //         for(let j = 0; j < this.m_boardSize; ++j){
-    //             console.log(this.m_tileArray[i][j].getTableCell())
-    //         }
-    //     }
-    // }
 }

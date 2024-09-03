@@ -18,6 +18,8 @@ export class Game {
             this.m_difficulty = CONSTANTS.DIFFICULTY.EXPERT;
         }
         this.m_gameBoard = new GameBoard(CONSTANTS.BOARD_SIZES[this.m_difficulty]);
+        let txt = String(CONSTANTS.BOARD_SIZES[this.m_difficulty] + 'x' + CONSTANTS.BOARD_SIZES[this.m_difficulty]);
+        document.getElementById("boardSize").innerText = txt;
     }
     static getGameInstance() {
         if (Game.m_GameInstance) {
@@ -29,9 +31,6 @@ export class Game {
     restartGame() {
         document.getElementById("gameStatus").innerText = "";
         Game.m_GameInstance = new Game();
-    }
-    getBoard() {
-        return this.m_gameBoard;
     }
     isGameOver() {
         return this.m_gameOver;

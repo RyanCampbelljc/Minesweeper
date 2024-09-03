@@ -1,3 +1,5 @@
 To compile ctrl-shft-b -> tsc: build - tsconfig.json
 
 
+1) make time work
+2) style it nicer

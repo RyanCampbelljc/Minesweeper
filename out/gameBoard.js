@@ -29,9 +29,6 @@ export class GameBoard {
         }
         return tileArray;
     }
-    getTileArray() {
-        return this.m_tileArray;
-    }
     placeBombs() {
         let row, col;
         let bombsToBePlaced = CONSTANTS.NUM_BOMBS[Game.getGameInstance().getDifficulty()];
