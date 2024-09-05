@@ -1,1 +1,2 @@
 # Minesweeper
+This is a web-based implementation of the classic Minesweeper game, built to showcase my skills in TypeScript, HTML, CSS]. The game features a grid of hidden mines that players must attempt to uncover. The objective is to clear the board without triggering any mines. This project demonstrates my ability to implement game logic, manage user interactions, and create a responsive interface. It also includes features like difficulty levels, a timer, and a restart option for a smooth user experience.
