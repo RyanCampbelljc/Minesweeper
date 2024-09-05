@@ -11,6 +11,10 @@ body{
     margin: 0;
 
 }
+p{
+    margin-top:5px;
+    margin-bottom:5px;
+}
 /* header */
 #header{
     display: flex;
@@ -19,8 +23,8 @@ body{
 }
 /* The game */
 #game-content{
-    margin-left:25%;
-    margin-right:25%;
+    margin-left:auto;
+    margin-right:auto;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -32,13 +36,14 @@ body{
     justify-content: space-between;
     padding-left: 5px;
     padding-right: 5px;
+    background-color:rgb(55, 103, 119)
 }
 .game-content-ui-item{
     display: flex;
     flex-direction: row;
     align-items: center;
     flex: 1;
-    gap: 5px;
+    gap: 10px;
     /* padding: 5px; */
 }
 #midUI{
@@ -48,6 +53,12 @@ body{
     justify-content:end;
 }
 
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
 
 
 
@@ -59,10 +70,27 @@ body{
     border-collapse: collapse;
 }
 td{
-    min-width: 25px;
-    height: 25px;
+    min-width: 35px;
+    height: 35px;
     text-align: center;
     background-color: gray;
     user-select: none;
     border: 2px solid black;
+}
+
+.symbols{
+    font-size: 16px; /* Size of the symbol */
+    background-color: rgb(55, 103, 119); /* Background color of the button */
+    /* color: white; Color of the symbol */
+    /* border: 1px solid white; Removes the default border */
+    /* border-radius: 5px; Optional: Rounds the corners */
+    
+}
+
+.clickable{
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+}
+
+#github{
+    text-decoration: none
 }

@@ -18,35 +18,47 @@
       <div id="game-content-ui">
         <div class="game-content-ui-item">
           <form method="post">
-            <select name="difficulty" id="dropDown">
+            <select name="difficulty" id="dropDown" class="clickable">
               <!-- changed the display text so the drop down would have ledd with -->
               <option value="beginner">Easy</option>
-              <option value="intermediate">Medium</option>
+              <option value="intermediate" selected="selected">Medium</option>
               <option value="expert">Hard</option>
             </select>
           </form>
 
           <form method="post" id="reset">
             <p>
-              <input type="button" value="RESET" id="button" />
+              <input
+                type="button"
+                value="&#11119;"
+                id="resetButton"
+                class="symbols clickable"
+              />
             </p>
           </form>
         </div>
 
         <div class="game-content-ui-item" id="midUI">
-          <strong>T: <span id="time">0</span></strong>
-          <p>mid</p>
+          <div class="flexRow">
+            <p class="symbols">&#9202</p>
+            <p id="time">000</p>
+          </div>
+          <div class="flexRow">
+            <p class="symbols">&#128681;</p>
+            <p id="flags">0</p>
+          </div>
         </div>
 
         <div class="game-content-ui-item" id="rightUI">
-          <p>right</p>
-          <p>right!</p>
+          <p class="symbols clickable" id="volume"></p> <!--volume-->
+          <a class="symbols clickable" id="github" href="github.com">&#128279</a>
         </div>
       </div>
       <!-- The gameboard is made by adding rows and columns to this table -->
       <table id="table"></table>
     </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+    </div>
   </body>
 </html>

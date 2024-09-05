@@ -83,6 +83,7 @@ export class GameBoard{
             this.m_noTilesRevealed = false;
             this.placeBombs();
             this.setNumAdjacentBombs();
+            Game.getGameInstance().startTimer(); // todo once again, a signal would have made more sense here
         }
         if(this.m_tileArray[row][col].isBomb())
             this.setGameOver();

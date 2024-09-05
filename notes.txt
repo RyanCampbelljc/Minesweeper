@@ -1,15 +1,7 @@
 To compile ctrl-shft-b -> tsc: build - tsconfig.json
 
-left
-difficulty
-reset
+proper gethub link
 
-mid
-flags
-time
-
-right
-sound on or off
-github
-
-on mid ui make top and bottom have same space as left and right
+would be good to setup some observer pattern so instead of calling a function like tileRevealed in Game from tile you can send it an event
+and a list of optional parameters
+Relook at particle assignment for how I did that before
