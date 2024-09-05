@@ -14,8 +14,6 @@ function setup(){
     startGame();
 }
 
-//todo make below a little simpler
-
 function startGame(){
     Game.getGameInstance();
 }
