@@ -1,7 +1,0 @@
-To compile ctrl-shft-b -> tsc: build - tsconfig.json
-
-proper gethub link
-
-would be good to setup some observer pattern so instead of calling a function like tileRevealed in Game from tile you can send it an event
-and a list of optional parameters
-Relook at particle assignment for how I did that before
